@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ซ่อมบ้านอาคารทรุดโดย 395 | นวัตกรรมกดเสาเข็มไฮโดรลิคแก้ไขบ้านทรุดตัว</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Palette ตามเอกสารแนบ */
+      --color-navy: #2A445D;
+      --color-sage: #6B705C;
+      --color-terracotta: #BA5A3A;
+      --color-crimson: #74232E;
+      --color-plum: #3E272B;
+
+      /* High-tech Base System */
+      --bg-dark: #0f141c;
+      --card-surface: rgba(42, 68, 93, 0.25);
+      --card-border: rgba(186, 90, 58, 0.35);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --line-green: #06c755;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Sarabun', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(186, 90, 58, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(42, 68, 93, 0.45) 0%, transparent 50%),
+        linear-gradient(180deg, #0d1117 0%, #151a24 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Tech Header */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(42, 68, 93, 0.75) 0%, rgba(62, 39, 43, 0.85) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 36px 24px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 30px rgba(186, 90, 58, 0.15);
+      margin-bottom: 22px;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-terracotta), var(--color-crimson), var(--color-sage));
+    }
+
+    .badge-tech {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(186, 90, 58, 0.2);
+      border: 1px solid var(--color-terracotta);
+      color: #ff9b7d;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .badge-tech::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background-color: var(--color-terracotta);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--color-terracotta);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 14.5px;
+      max-width: 520px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* Trust Stats (Pills) */
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .trust-item {
+      background: rgba(42, 68, 93, 0.3);
+      border: 1px solid rgba(107, 112, 92, 0.4);
+      border-radius: 14px;
+      padding: 10px 8px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .trust-item span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #d1d5db;
+    }
+
+    .trust-item small {
+      color: #ff9b7d;
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    /* Modern Section Header */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 22px 4px 14px;
+    }
+
+    .section-head h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-head h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--color-terracotta);
+      border-radius: 2px;
+    }
+
+    /* 6 Photo Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-terracotta);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.92);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.06);
+      filter: brightness(1);
+    }
+
+    .gallery-tag {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px 10px 8px;
+      background: linear-gradient(180deg, transparent 0%, rgba(15, 20, 28, 0.95) 85%);
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #f8fafc;
+      text-align: center;
+    }
+
+    /* High-Tech Service Cards */
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .service-box {
+      background: linear-gradient(135deg, rgba(42, 68, 93, 0.25) 0%, rgba(62, 39, 43, 0.15) 100%);
+      border: 1px solid rgba(107, 112, 92, 0.35);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+    }
+
+    .service-box:hover {
+      background: rgba(42, 68, 93, 0.4);
+      border-color: var(--color-terracotta);
+      transform: translateX(4px);
+    }
+
+    .service-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-terracotta);
+      background: rgba(186, 90, 58, 0.15);
+      border: 1px solid rgba(186, 90, 58, 0.4);
+      padding: 6px 9px;
+      border-radius: 10px;
+      line-height: 1;
+    }
+
+    .service-box strong {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 2px;
+    }
+
+    .service-box p {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-crimson) 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(186, 90, 58, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(186, 90, 58, 0.5);
+    }
+
+    .btn-line-custom {
+      background: linear-gradient(135deg, #059b43 0%, var(--line-green) 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(6, 199, 85, 0.25);
+    }
+
+    .btn-line-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(6, 199, 85, 0.4);
+    }
+
+    /* Locations Bar */
+    .location-wrapper {
+      background: rgba(62, 39, 43, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+    }
+
+    .loc-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--color-sage);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .loc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .loc-tag {
+      background: rgba(42, 68, 93, 0.45);
+      color: #e2e8f0;
+      border: 1px solid rgba(107, 112, 92, 0.35);
+      font-size: 12.5px;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 11.5px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Hero Box -->
+    <header class="hero-card">
+      <div class="badge-tech">โครงสร้างมั่นคง ปลอดภัย ตรงจุด</div>
+      <h1>ซ่อมบ้านอาคารทรุดโดย 395</h1>
+      <p class="subtitle">ผู้เชี่ยวชาญแก้ไขโครงสร้างบ้านและอาคารทรุดตัว</p>
+    </header>
+
+    <!-- Trust Stats -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <span>ประเมินหน้างาน</span>
+        <small>SURVEY & DIAGNOSIS</small>
+      </div>
+      <div class="trust-item">
+        <span>วิศวกรดูแล</span>
+        <small>SAFETY STANDARD</small>
+      </div>
+      <div class="trust-item">
+        <span>เครื่องมือมาตรฐาน</span>
+        <small>HIGH PRECISION</small>
+      </div>
+    </div>
+
+    <!-- Gallery 6 รูปภาพ -->
+<div class="section-head">
+  <h2>ภาพการปฏิบัติงานและผลงานจริง</h2>
+</div>
+    
+
+    <div class="gallery-grid">
+      <!-- รูป 1 -->
+      <div class="gallery-card">
+        <img src="job1.jpg"alt="สำรวจ-วิเคราะห์และออกแบบโครงสร้างก่อนทำการแก้ไขทุกครั้ง">
+        <div class="gallery-tag">1.สำรวจ-วิเคราะห์และออกแบบโครงสร้างก่อนทำการแก้ไขทุกครั้ง </div>
+      </div>
+      <!-- รูป 2 -->
+      <div class="gallery-card">
+        <img src="job2.jpg" alt="กดเสาเข็มไมโครไพล์ระบบไฮดรอลิก">
+        <div class="gallery-tag">2. กดเสาเข็มไมโครไพล์ระบบไฮดรอลิก</div>
+      </div>
+      <!-- รูป 3 -->
+      <div class="gallery-card">
+        <img src="job3.jpg" alt="กดเสาเข็มไมโครไพล์ถึงชั้นดินดาน">
+        <div class="gallery-tag">3. กดเสาเข็มไมโครไพล์ถึงชั้นดินดาน</div>
+       </div>
+      <!-- รูป 4 -->
+      <div class="gallery-card">
+        <img src="job4.jpg"alt="ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง ">
+        <div class="gallery-tag">4. ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง</div>
+      </div>
+      <!-- รูป 5 -->
+      <div class="gallery-card">
+      <img src="job5.jpg" alt="ยกปรับระดับฐานรากให้กลับมาได้ระนาบที่สมดุล">
+        <div class="gallery-tag">5. ยกปรับระดับฐานรากให้กลับมาได้ระนาบที่สมดุล</div>
+      </div>
+      <!-- รูป 6 -->
+      <div class="gallery-card">
+        <img src="job6.jpg" alt="งานโครงสร้างคืนสภาพมั่นคง">
+        <div class="gallery-tag">6. โครงสร้างมั่นคง แข็งแรงถาวร</div>
+      </div>
+    </div>
+
+    <!-- ขอบเขตบริการ -->
+    <div class="section-head">
+      <h2>ขอบเขตและบริการหลัก</h2>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-box">
+        <div class="service-num">01</div>
+        <div>
+          <strong>สำรวจและวิเคราะห์สาเหตุ</strong>
+          <p>ตรวจสอบลักษณะการทรุดตัวเพื่อวางแนวทางแก้ไขที่ตรงจุดและไม่ทรุดซ้ำ</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-num">02</div>
+        <div>
+          <strong>แก้ไขบ้านและอาคารทรุด</strong>
+          <p>แก้ไขส่วนต่อเติมทรุด บ้านทรุดตัว </p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-num">03</div>
+        <div>
+          <strong>เสริมเสาเข็มไมโครไพล์ระบบไฮดรอลิก</strong>
+          <p>กดเสาเข็มเหล็ก/ไมโครไพล์ลึกถึงชั้นดินดาน ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง</p>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-num">04</div>
+        <div>
+          <strong>ยกปรับระดับฐานราก</strong>
+          <p>ยกระดับคานอาคารทรุดให้กลับมาได้ระนาบที่สมดุล</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Actions -->
+    <div class="cta-container">
+      <a href="tel:0817905128" class="btn-action btn-call">
+        <span>📞</span> โทรปรึกษาด่วน: 081-790-5128
+      </a>
+      <a href="https://line.me/ti/p/~keng5128" target="_blank" class="btn-action btn-line-custom">
+        <span>💬</span> แอด LINE: keng5128 (ส่งรูปประเมิน)
+      </a>
+    </div>
+
+    <!-- พื้นที่ให้บริการ -->
+    <div class="location-wrapper">
+      <div class="loc-label">AVAILABLE SERVICE COVERAGE</div>
+      <div class="loc-tags">
+        <span class="loc-tag">กรุงเทพฯ</span>
+        <span class="loc-tag">สมุทรปราการ</span>
+        <span class="loc-tag">นนทบุรี</span>
+        <span class="loc-tag">ปทุมธานี</span>
+        <span class="loc-tag">นครราชสีมา</span>
+      </div>
+    </div>
+
+    <footer>
+      © 395 Renovation & Foundation Service. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
