@@ -34,6 +34,7 @@
       --text-main: #f1f5f9;
       --text-muted: #94a3b8;
       --line-green: #06c755;
+      --fb-blue: #1877f2;
     }
     
     * {
@@ -225,3 +226,285 @@
       background: linear-gradient(135deg, rgba(6, 199, 85, 0.15) 0%, rgba(42, 68, 93, 0.3) 100%);
       border-color: rgba(6, 199, 85, 0.4);
     }
+
+    .action-btn.call-primary {
+      background: linear-gradient(135deg, rgba(186, 90, 58, 0.2) 0%, rgba(42, 68, 93, 0.3) 100%);
+      border-color: rgba(186, 90, 58, 0.4);
+    }
+
+    .action-btn.facebook-btn {
+      background: linear-gradient(135deg, rgba(24, 119, 242, 0.18) 0%, rgba(42, 68, 93, 0.3) 100%);
+      border-color: rgba(24, 119, 242, 0.4);
+    }
+    
+    .btn-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+
+    .action-btn.primary .btn-icon {
+      background: var(--line-green);
+      color: #ffffff;
+    }
+
+    .action-btn.call-primary .btn-icon {
+      background: var(--color-crimson);
+      color: #ffffff;
+    }
+
+    .action-btn.facebook-btn .btn-icon {
+      background: var(--fb-blue);
+      color: #ffffff;
+    }
+    
+    .btn-content {
+      flex: 1;
+    }
+    
+    .btn-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .btn-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    
+    .btn-arrow {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-left: 10px;
+    }
+
+    /* Technical Highlight Cards */
+    .service-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 10px;
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .service-header i {
+      color: var(--color-terracotta);
+      font-size: 16px;
+    }
+
+    .service-name {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .service-details {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Trust Elements / Process */
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .process-step {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 10px 4px;
+    }
+
+    .step-number {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-terracotta);
+      margin-bottom: 2px;
+    }
+
+    .step-text {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    /* Legal Footer */
+    .company-footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .company-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 4px;
+    }
+
+    .company-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTR4R2JV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="container">
+    
+    <!-- Hero / Brand Section -->
+    <div class="hero-card">
+      <div class="badge-tech">
+        <i class="fa-solid fa-microchip"></i> วิศวกรรมควบคุม
+      </div>
+      <h1 class="hero-title">วิศวกรรมยกปรับระดับอาคาร<br>แก้ไขบ้านทรุดและดึงโครงสร้าง</h1>
+      <p class="hero-desc">แก้ปัญหาอาคารทรุดเอียง ส่วนต่อเติมทรุดตัว แตกร้าว เสริมฐานรากไมโครไพล์ด้วยระบบไฮดรอลิกมาตรฐานสูง</p>
+      
+      <div class="warranty-badge">
+        <i class="fa-solid fa-shield-halved"></i> รับประกันผลงานโครงสร้างยาวนาน 5 ปีเต็ม
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number"><i class="fa-solid fa-gears"></i> ไฮดรอลิก</div>
+        <div class="stat-label">ยกปรับระดับแม่นยำ</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><i class="fa-solid fa-ruler-combined"></i> มาตรฐาน</div>
+        <div class="stat-label">ควบคุมโดยวิศวกร</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><i class="fa-solid fa-award"></i> 5 ปี</div>
+        <div class="stat-label">รับประกันโครงสร้าง</div>
+      </div>
+    </div>
+
+    <!-- Contact & Consultation Actions -->
+    <div class="section-title">
+      <i class="fa-solid fa-bolt"></i> ปรึกษาวิศวกรและชมผลงานจริง
+    </div>
+    
+    <div class="action-list">
+      <a href="https://line.me/ti/p/~keng5128" target="_blank" rel="noopener" class="action-btn primary">
+        <div class="btn-icon">
+          <i class="fa-brands fa-line"></i>
+        </div>
+        <div class="btn-content">
+          <div class="btn-title">ปรึกษาวิศวกรผ่าน LINE Official <span style="font-size:11px; background:#06c755; color:#fff; padding:1px 6px; border-radius:4px;">เร็วที่สุด</span></div>
+          <div class="btn-desc">ส่งรูปภาพรอยแตกร้าวหรืออาการทรุดตัวเพื่อประเมินเบื้องต้นได้ทันที (LINE ID: keng5128)</div>
+        </div>
+        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <a href="tel:0923956298" class="action-btn call-primary">
+        <div class="btn-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="btn-content">
+          <div class="btn-title">โทรสายด่วนวิศวกรโครงสร้าง</div>
+          <div class="btn-desc">ติดต่อด่วน: 092-395-6298 (นัดหมายสำรวจพื้นที่จริง)</div>
+        </div>
+        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <a href="https://www.facebook.com/underpin395" target="_blank" rel="noopener" class="action-btn facebook-btn">
+        <div class="btn-icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="btn-content">
+          <div class="btn-title">ชมผลงานและรีวิวหน้างานจริงผ่าน Facebook</div>
+          <div class="btn-desc">ติดตามภาพการทำงานจริง เคสยกปรับระดับ และงานกดเข็มไมโครไพล์</div>
+        </div>
+        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+    </div>
+
+    <!-- Workflow / Engineering Process -->
+    <div class="section-title">
+      <i class="fa-solid fa-list-check"></i> 4 ขั้นตอนมาตรฐานการดำเนินงาน
+    </div>
+
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="step-number">STEP 01</div>
+        <div class="step-text">สำรวจรอยร้าว & วัดระดับทรุด</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">STEP 02</div>
+        <div class="step-text">คำนวณการรับน้ำหนัก & ออกแบบ</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">STEP 03</div>
+        <div class="step-text">กดเข็มไมโครไพล์ & ยกปรับระดับ</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">STEP 04</div>
+        <div class="step-text">เก็บรอยต่อ & ส่งมอบประกัน 5 ปี</div>
+      </div>
+    </div>
+
+    <!-- Service Scope -->
+    <div class="section-title">
+      <i class="fa-solid fa-wrench"></i> ขอบเขตบริการและโซลูชันวิศวกรรม
+    </div>
+
+    <div class="service-card">
+      <div class="service-header">
+        <i class="fa-solid fa-house-chimney-crack"></i>
+        <div class="service-name">ยกปรับระดับอาคารและส่วนต่อเติมทรุด</div>
+      </div>
+      <div class="service-details">
+        แก้ปัญหาห้องครัวทรุด โรงจอดรถแยกตัว หรือตัวบ้านทรุดเอียง ด้วยการกดเสาเข็มไมโครไพล์ระบบไฮดรอลิกเพื่อหยุดการทรุดตัวถาวร พร้อมยกระดับคืนตำแหน่งเดิมอย่างปลอดภัย
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-header">
+        <i class="fa-solid fa-arrows-to-circle"></i>
+        <div class="service-name">ดึงโครงสร้างและเชื่อมรอยต่ออาคาร</div>
+      </div>
+      <div class="service-details">
+        ดึงรั้งและเชื่อมโยงโครงสร้างที่มีการเคลื่อนตัว แตกร้าวออกจากกัน เสริมความแข็งแรงของฐานรากเดิมเพื่อป้องกันความเสียหายต่อโครงสร้างหลัก
+      </div>
+    </div>
+
+    <!-- Footer / Credentials -->
+    <div class="company-footer">
+      <div class="company-name">หจก. สถาปนิกปั้นบ้าน (Khajornsri Renovate)</div>
+      <div class="company-sub">เชี่ยวชาญงานซ่อมบ้านทรุด เสริมฐานรากไมโครไพล์ ดึงโครงสร้าง และยกปรับระดับอาคาร</div>
+      <div class="company-sub" style="margin-top: 6px; font-size: 11px;">พื้นที่ให้บริการหลัก: กรุงเทพฯ, นนทบุรี, ปทุมธานี, สมุทรปราการ และนครราชสีมา</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
