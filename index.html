@@ -1,510 +1,379 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PTR4R2JV');</script>
-  <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PTR4R2JV');</script>
+    <!-- End Google Tag Manager -->
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>วิศวกรรมยกปรับระดับอาคาร แก้ไขบ้านทรุด เสริมฐานรากไมโครไพล์</title>
-  
-  <meta name="description" content="บริการซ่อมบ้านทรุด ยกปรับระดับอาคาร และดึงโครงสร้างด้วยระบบไฮดรอลิก โดย หจก. สถาปนิกปั้นบ้าน เสริมฐานรากไมโครไพล์ ปลอดภัย มีวิศวกรควบคุมงาน พร้อมรับประกัน 5 ปีเต็ม">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    :root {
-      --color-terracotta: #BA5A3A;
-      --color-sage: #8A9A86;
-      --color-navy: #2A445D;
-      --color-cream: #F5F2EB;
-      --color-charcoal: #2F3E46;
-      --color-crimson: #C84B31;
-      
-      --bg-dark: #0f141c;
-      --card-bg: rgba(26, 34, 46, 0.85);
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --line-green: #06c755;
-      --fb-blue: #1877f2;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ซ่อมบ้านอาคารทรุดโดย 395 | นวัตกรรมกดเสาเข็มไฮโดรลิคแก้ไขบ้านทรุดตัว</title>
     
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Sarabun', sans-serif;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    body {
-      background-color: var(--bg-dark);
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(186, 90, 58, 0.18) 0%, transparent 40%),
-        radial-gradient(circle at 85% 75%, rgba(42, 68, 93, 0.45) 0%, transparent 50%),
-        linear-gradient(180deg, #0d1117 0%, #151a24 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-      padding-bottom: 40px;
-    }
-    
-    /* Container */
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 24px 16px;
-    }
-    
-    /* Tech Header */
-    .hero-card {
-      background: linear-gradient(135deg, rgba(42, 68, 93, 0.75) 0%, rgba(62, 39, 43, 0.85) 100%);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 36px 24px 28px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 30px rgba(186, 90, 58, 0.15);
-      margin-bottom: 22px;
-    }
-    
-    .hero-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--color-terracotta), var(--color-crimson), var(--color-sage));
-    }
-    
-    .badge-tech {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(186, 90, 58, 0.2);
-      border: 1px solid var(--color-terracotta);
-      color: #ff9b7d;
-      padding: 4px 14px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    
-    .hero-title {
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 10px;
-      color: #ffffff;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-    
-    .hero-desc {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      max-width: 460px;
-      margin: 0 auto 18px;
-      line-height: 1.5;
-    }
+    <style>
+        :root {
+            --primary: #c2410c; 
+            --primary-dark: #9a3412;
+            --accent: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --line-green: #06c755;
+            --fb-blue: #1877f2;
+        }
 
-    .warranty-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(42, 68, 93, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 13px;
-      color: #e2e8f0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Prompt', sans-serif;
+        }
 
-    .warranty-badge i {
-      color: #fbbf24;
-    }
-    
-    /* Stats Bar */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 22px;
-    }
-    
-    .stat-item {
-      background: rgba(30, 41, 59, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 14px 8px;
-      text-align: center;
-      backdrop-filter: blur(8px);
-    }
-    
-    .stat-number {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-    }
+        body {
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
 
-    .stat-number i {
-      font-size: 16px;
-      color: var(--color-terracotta);
-    }
-    
-    .stat-label {
-      font-size: 11.5px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-    
-    /* Section Title */
-    .section-title {
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-      margin: 22px 0 12px 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
 
-    .section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.08);
-    }
-    
-    /* Dynamic Action Links */
-    .action-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    
-    .action-btn {
-      display: flex;
-      align-items: center;
-      background: var(--card-bg);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 16px;
-      text-decoration: none;
-      color: var(--text-main);
-      transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
+        /* Top Hero */
+        .header {
+            background: linear-gradient(135deg, var(--dark), #1e293b);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
 
-    .action-btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(186, 90, 58, 0.4);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
-    
-    .action-btn.primary {
-      background: linear-gradient(135deg, rgba(6, 199, 85, 0.15) 0%, rgba(42, 68, 93, 0.3) 100%);
-      border-color: rgba(6, 199, 85, 0.4);
-    }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
 
-    .action-btn.call-primary {
-      background: linear-gradient(135deg, rgba(186, 90, 58, 0.2) 0%, rgba(42, 68, 93, 0.3) 100%);
-      border-color: rgba(186, 90, 58, 0.4);
-    }
+        .header p {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 300;
+        }
 
-    .action-btn.facebook-btn {
-      background: linear-gradient(135deg, rgba(24, 119, 242, 0.18) 0%, rgba(42, 68, 93, 0.3) 100%);
-      border-color: rgba(24, 119, 242, 0.4);
-    }
-    
-    .btn-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      margin-right: 14px;
-      flex-shrink: 0;
-    }
+        .badge {
+            background: var(--primary);
+            color: white;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
 
-    .action-btn.primary .btn-icon {
-      background: var(--line-green);
-      color: #ffffff;
-    }
+        /* Features highlight */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 15px 20px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
 
-    .action-btn.call-primary .btn-icon {
-      background: var(--color-crimson);
-      color: #ffffff;
-    }
+        .feature-item {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
 
-    .action-btn.facebook-btn .btn-icon {
-      background: var(--fb-blue);
-      color: #ffffff;
-    }
-    
-    .btn-content {
-      flex: 1;
-    }
-    
-    .btn-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 2px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    .btn-desc {
-      font-size: 12.5px;
-      color: var(--text-muted);
-    }
-    
-    .btn-arrow {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-left: 10px;
-    }
+        .feature-item i {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
 
-    /* Technical Highlight Cards */
-    .service-card {
-      background: rgba(30, 41, 59, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 10px;
-    }
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 20px;
+        }
 
-    .service-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
 
-    .service-header i {
-      color: var(--color-terracotta);
-      font-size: 16px;
-    }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
 
-    .service-name {
-      font-size: 14.5px;
-      font-weight: 600;
-      color: #ffffff;
-    }
+        .gallery-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
 
-    .service-details {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
+        .gallery-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            background-color: #e2e8f0;
+        }
 
-    /* Trust Elements / Process */
-    .process-timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      margin-bottom: 22px;
-      text-align: center;
-    }
+        .gallery-card p {
+            font-size: 11px;
+            padding: 8px;
+            color: var(--text-main);
+            text-align: center;
+            font-weight: 600;
+            background: #ffffff;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .process-step {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      border-radius: 12px;
-      padding: 10px 4px;
-    }
+        /* Content Info */
+        .info-section {
+            padding: 0 20px 20px;
+        }
 
-    .step-number {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--color-terracotta);
-      margin-bottom: 2px;
-    }
+        .info-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 15px;
+        }
 
-    .step-text {
-      font-size: 11.5px;
-      color: var(--text-muted);
-    }
+        .info-card h3 {
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
 
-    /* Legal Footer */
-    .company-footer {
-      text-align: center;
-      margin-top: 32px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
+        .info-card p {
+            font-size: 12.5px;
+            color: var(--text-light);
+        }
 
-    .company-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: #cbd5e1;
-      margin-bottom: 4px;
-    }
+        /* Facebook Page Button */
+        .fb-banner-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1877f2, #0d65d9);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin: 0 20px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25);
+            transition: all 0.2s ease;
+        }
 
-    .company-sub {
-      font-size: 11.5px;
-      color: var(--text-muted);
-    }
-  </style>
+        .fb-banner-btn i {
+            font-size: 20px;
+        }
+
+        .fb-banner-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(24, 119, 242, 0.35);
+        }
+
+        /* Fixed Footer Call-to-action */
+        .bottom-cta {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 10px 16px;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 8px;
+            border-top: 1px solid #e2e8f0;
+            z-index: 100;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-align: center;
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-line {
+            background-color: var(--line-green);
+            color: white;
+        }
+
+        .btn-fb {
+            background-color: var(--fb-blue);
+            color: white;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-light);
+            padding: 10px 20px 30px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTR4R2JV"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTR4R2JV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-  <div class="container">
-    
-    <!-- Hero / Brand Section -->
-    <div class="hero-card">
-      <div class="badge-tech">
-        <i class="fa-solid fa-microchip"></i> วิศวกรรมควบคุม
-      </div>
-      <h1 class="hero-title">วิศวกรรมยกปรับระดับอาคาร<br>แก้ไขบ้านทรุดและดึงโครงสร้าง</h1>
-      <p class="hero-desc">แก้ปัญหาอาคารทรุดเอียง ส่วนต่อเติมทรุดตัว แตกร้าว เสริมฐานรากไมโครไพล์ด้วยระบบไฮดรอลิกมาตรฐานสูง</p>
-      
-      <div class="warranty-badge">
-        <i class="fa-solid fa-shield-halved"></i> รับประกันผลงานโครงสร้างยาวนาน 5 ปีเต็ม
-      </div>
-    </div>
-
-    <!-- Quick Stats -->
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number"><i class="fa-solid fa-gears"></i> ไฮดรอลิก</div>
-        <div class="stat-label">ยกปรับระดับแม่นยำ</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number"><i class="fa-solid fa-ruler-combined"></i> มาตรฐาน</div>
-        <div class="stat-label">ควบคุมโดยวิศวกร</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number"><i class="fa-solid fa-award"></i> 5 ปี</div>
-        <div class="stat-label">รับประกันโครงสร้าง</div>
-      </div>
-    </div>
-
-    <!-- Contact & Consultation Actions -->
-    <div class="section-title">
-      <i class="fa-solid fa-bolt"></i> ปรึกษาวิศวกรและชมผลงานจริง
-    </div>
-    
-    <div class="action-list">
-      <a href="https://line.me/ti/p/~keng5128" target="_blank" rel="noopener" class="action-btn primary">
-        <div class="btn-icon">
-          <i class="fa-brands fa-line"></i>
+    <div class="container">
+        <!-- Top Header -->
+        <div class="header">
+            <span class="badge">โครงสร้างมั่นคง ปลอดภัย ตรงจุด</span>
+            <h1>ซ่อมบ้านอาคารทรุดโดย 395</h1>
+            <p>ผู้เชี่ยวชาญแก้ไขโครงสร้างบ้านและอาคารทรุดตัว</p>
         </div>
-        <div class="btn-content">
-          <div class="btn-title">ปรึกษาวิศวกรผ่าน LINE Official <span style="font-size:11px; background:#06c755; color:#fff; padding:1px 6px; border-radius:4px;">เร็วที่สุด</span></div>
-          <div class="btn-desc">ส่งรูปภาพรอยแตกร้าวหรืออาการทรุดตัวเพื่อประเมินเบื้องต้นได้ทันที (LINE ID: keng5128)</div>
+
+        <!-- Highlight Features -->
+        <div class="features">
+            <div class="feature-item">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                ประเมินหน้างาน
+                <div style="font-size: 10px; color: var(--text-light);">SURVEY & DIAGNOSIS</div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-user-shield"></i>
+                วิศวกรดูแล
+                <div style="font-size: 10px; color: var(--text-light);">SAFETY STANDARD</div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                เครื่องมือมาตรฐาน
+                <div style="font-size: 10px; color: var(--text-light);">HIGH PRECISION</div>
+            </div>
         </div>
-        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-      </a>
 
-      <a href="tel:0923956298" class="action-btn call-primary">
-        <div class="btn-icon">
-          <i class="fa-solid fa-phone"></i>
+        <!-- Real Job Images -->
+        <div class="gallery-section">
+            <h2 class="section-title">ภาพการปฏิบัติงานและผลงานจริง</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="job1.JPG" alt="สำรวจ-วิเคราะห์และออกแบบโครงสร้างก่อนทำการแก้ไขทุกครั้ง">
+                    <p>1. สำรวจ-วิเคราะห์และออกแบบโครงสร้างก่อนทำการแก้ไขทุกครั้ง</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="job2.JPG" alt="กดเสาเข็มไมโครไพล์ระบบไฮดรอลิก">
+                    <p>2. กดเสาเข็มไมโครไพล์ระบบไฮดรอลิก</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="job3.JPG" alt="กดเสาเข็มไมโครไพล์ถึงชั้นดินดาน">
+                    <p>3. กดเสาเข็มไมโครไพล์ถึงชั้นดินดาน</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="job4.JPG" alt="ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง">
+                    <p>4. ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="job5.JPG" alt="ยกปรับระดับฐานรากให้กลับมาได้ระนาบที่สมดุล">
+                    <p>5. ยกปรับระดับฐานรากให้กลับมาได้ระนาบที่สมดุล</p>
+                </div>
+                <div class="gallery-card">
+                    <img src="job6.JPG" alt="งานโครงสร้างคืนสภาพมั่นคง แข็งแรงถาวร">
+                    <p>6. โครงสร้างมั่นคง แข็งแรงถาวร</p>
+                </div>
+            </div>
         </div>
-        <div class="btn-content">
-          <div class="btn-title">โทรสายด่วนวิศวกรโครงสร้าง</div>
-          <div class="btn-desc">ติดต่อด่วน: 092-395-6298 (นัดหมายสำรวจพื้นที่จริง)</div>
+
+        <!-- Facebook Showcase Button -->
+        <a href="https://www.facebook.com/underpin395" target="_blank" rel="noopener" class="fb-banner-btn">
+            <i class="fa-brands fa-facebook"></i> ชมผลงานและรีวิวหน้างานจริงผ่าน Facebook เพจ
+        </a>
+
+        <!-- Service Scopes -->
+        <div class="info-section">
+            <h2 class="section-title">ขอบเขตและบริการหลัก</h2>
+            <div class="info-card">
+                <h3>01. สำรวจและวิเคราะห์สาเหตุ</h3>
+                <p>ตรวจสอบลักษณะการทรุดตัวเพื่อวางแนวทางแก้ไขที่ตรงจุดและไม่ทรุดซ้ำ</p>
+            </div>
+            <div class="info-card">
+                <h3>02. แก้ไขบ้านและอาคารทรุด</h3>
+                <p>แก้ไขส่วนต่อเติมทรุด ห้องครัวทรุด โรงจอดรถทรุด และโครงสร้างอาคารทรุดตัว</p>
+            </div>
+            <div class="info-card">
+                <h3>03. เสริมเสาเข็มไมโครไพล์ระบบไฮดรอลิก</h3>
+                <p>กดเสาเข็มเหล็ก/ไมโครไพล์ลึกถึงชั้นดินดาน ไร้แรงสั่นสะเทือนต่ออาคารข้างเคียง</p>
+            </div>
+            <div class="info-card">
+                <h3>04. ยกปรับระดับฐานราก</h3>
+                <p>ยกระดับคานอาคารทรุดให้กลับมาได้ระนาบที่สมดุลและปลอดภัย</p>
+            </div>
         </div>
-        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-      </a>
 
-      <a href="https://www.facebook.com/underpin395" target="_blank" rel="noopener" class="action-btn facebook-btn">
-        <div class="btn-icon">
-          <i class="fa-brands fa-facebook-f"></i>
+        <div class="footer-note">
+            <p><strong>พื้นที่ให้บริการ:</strong> กรุงเทพฯ สมุทรปราการ นนทบุรี ปทุมธานี นครราชสีมา</p>
+            <p style="margin-top: 4px;">© 395 Renovation & Foundation Service. All rights reserved.</p>
         </div>
-        <div class="btn-content">
-          <div class="btn-title">ชมผลงานและรีวิวหน้างานจริงผ่าน Facebook</div>
-          <div class="btn-desc">ติดตามภาพการทำงานจริง เคสยกปรับระดับ และงานกดเข็มไมโครไพล์</div>
+
+        <!-- Sticky Bottom CTA -->
+        <div class="bottom-cta">
+            <a href="tel:0923956298" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> โทรด่วน
+            </a>
+            <a href="https://line.me/ti/p/~keng5128" target="_blank" rel="noopener" class="btn btn-line">
+                <i class="fa-brands fa-line"></i> แอด LINE
+            </a>
+            <a href="https://www.facebook.com/underpin395" target="_blank" rel="noopener" class="btn btn-fb">
+                <i class="fa-brands fa-facebook-f"></i> เพจ Facebook
+            </a>
         </div>
-        <div class="btn-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-      </a>
     </div>
-
-    <!-- Workflow / Engineering Process -->
-    <div class="section-title">
-      <i class="fa-solid fa-list-check"></i> 4 ขั้นตอนมาตรฐานการดำเนินงาน
-    </div>
-
-    <div class="process-timeline">
-      <div class="process-step">
-        <div class="step-number">STEP 01</div>
-        <div class="step-text">สำรวจรอยร้าว & วัดระดับทรุด</div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">STEP 02</div>
-        <div class="step-text">คำนวณการรับน้ำหนัก & ออกแบบ</div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">STEP 03</div>
-        <div class="step-text">กดเข็มไมโครไพล์ & ยกปรับระดับ</div>
-      </div>
-      <div class="process-step">
-        <div class="step-number">STEP 04</div>
-        <div class="step-text">เก็บรอยต่อ & ส่งมอบประกัน 5 ปี</div>
-      </div>
-    </div>
-
-    <!-- Service Scope -->
-    <div class="section-title">
-      <i class="fa-solid fa-wrench"></i> ขอบเขตบริการและโซลูชันวิศวกรรม
-    </div>
-
-    <div class="service-card">
-      <div class="service-header">
-        <i class="fa-solid fa-house-chimney-crack"></i>
-        <div class="service-name">ยกปรับระดับอาคารและส่วนต่อเติมทรุด</div>
-      </div>
-      <div class="service-details">
-        แก้ปัญหาห้องครัวทรุด โรงจอดรถแยกตัว หรือตัวบ้านทรุดเอียง ด้วยการกดเสาเข็มไมโครไพล์ระบบไฮดรอลิกเพื่อหยุดการทรุดตัวถาวร พร้อมยกระดับคืนตำแหน่งเดิมอย่างปลอดภัย
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-header">
-        <i class="fa-solid fa-arrows-to-circle"></i>
-        <div class="service-name">ดึงโครงสร้างและเชื่อมรอยต่ออาคาร</div>
-      </div>
-      <div class="service-details">
-        ดึงรั้งและเชื่อมโยงโครงสร้างที่มีการเคลื่อนตัว แตกร้าวออกจากกัน เสริมความแข็งแรงของฐานรากเดิมเพื่อป้องกันความเสียหายต่อโครงสร้างหลัก
-      </div>
-    </div>
-
-    <!-- Footer / Credentials -->
-    <div class="company-footer">
-      <div class="company-name">หจก. สถาปนิกปั้นบ้าน (Khajornsri Renovate)</div>
-      <div class="company-sub">เชี่ยวชาญงานซ่อมบ้านทรุด เสริมฐานรากไมโครไพล์ ดึงโครงสร้าง และยกปรับระดับอาคาร</div>
-      <div class="company-sub" style="margin-top: 6px; font-size: 11px;">พื้นที่ให้บริการหลัก: กรุงเทพฯ, นนทบุรี, ปทุมธานี, สมุทรปราการ และนครราชสีมา</div>
-    </div>
-
-  </div>
-
 </body>
 </html>
